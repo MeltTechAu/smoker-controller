@@ -42,9 +42,9 @@ max31856 = 0
 #thermocouple_type = MAX31856.MAX31856_S_TYPE
 
 ### Thermocouple Connection (using bitbang interfaces)
-gpio_sensor_cs = 27
-gpio_sensor_clock = 22
-gpio_sensor_data = 17
+gpio_sensor_cs = 19
+gpio_sensor_clock = 13
+gpio_sensor_data = 26
 gpio_sensor_di = 10 # only used with max31856
 
 ########################################################################
@@ -54,7 +54,7 @@ gpio_sensor_di = 10 # only used with max31856
 # Every N seconds a decision is made about switching the relay[s] 
 # on & off and for how long. The thermocouple is read 
 # temperature_average_samples times during and the average value is used.
-sensor_time_wait = 5
+sensor_time_wait = y
 
 ########################################################################
 #
@@ -105,8 +105,8 @@ sim_R_ho_air   = 0.05   # K/W  " with internal air circulation
 # If you change the temp_scale, all settings in this file are assumed to
 # be in that scale.
 
-temp_scale          = "f" # c = Celsius | f = Fahrenheit - Unit to display
-time_scale_slope    = "h" # s = Seconds | m = Minutes | h = Hours - Slope displayed in temp_scale per time_scale_slope
+temp_scale          = "c" # c = Celsius | f = Fahrenheit - Unit to display
+time_scale_slope    = "m" # s = Seconds | m = Minutes | h = Hours - Slope displayed in temp_scale per time_scale_slope
 time_scale_profile  = "m" # s = Seconds | m = Minutes | h = Hours - Enter and view target time in time_scale_profile
 
 # This setting is required. 
